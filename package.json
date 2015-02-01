@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "moment": "*",
+    "typogr": "*",
+    "underscore": "*",
+    "wintersmith": "*",
+    "wintersmith-less": "*",
+    "wintersmith-pagedown": "dwaite/wintersmith-pagedownextra",
+    "wintersmith-tag": "*",
+    "wintersmith-browserify": "*"
+  },
+  "repository": "none"
+}

@@ -1,0 +1,47 @@
+extends layout
+
+block content
+  include author
+
+  - var allTags = env.helpers.getAllTags()
+  header.header
+    if tagName
+      p.selected-tag
+        span.prompt Showing all articles in  
+          span.tag= tagName
+      p.other-tags
+        | Other tags:
+        - var otherTags = allTags.filter(function(tag){ return tag !== tagName})
+        each tag in otherTags
+          a.tag(href=env.helpers.getTagHome(tag).url)= tag
+    else
+      p.all-tags
+        | Index by tag: 
+        each tag in allTags
+          a.tag(href=env.helpers.getTagHome(tag).url)= tag
+
+  each article in articles
+    article.article.intro
+      header
+        p.date
+          span= moment.utc(article.date).format('DD. MMMM YYYY')
+        h2
+          a(href=article.url)= article.title
+      section.content
+        if article.intro.length > 0
+          | !{ typogr(article.intro).typogrify() }
+        if article.hasMore
+          p.more
+            a(href=article.url) more
+
+block prepend footer
+  div.nav
+    if prevPage
+      a(href=prevPage.url) « Newer
+    else
+      a(href='/archive.html') « Archives
+    if nextPage
+      a(href=nextPage.url) Next page »
+
+
+
