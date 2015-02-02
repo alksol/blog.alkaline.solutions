@@ -6,6 +6,7 @@
     "description": "Musings around Software Engineering"
   },
   "plugins": [
+    "./node_modules/wintersmith-coffee/",
     "./plugins/paginator.coffee",
     "./node_modules/wintersmith-less/",
     "./node_modules/wintersmith-tag/lib/",
