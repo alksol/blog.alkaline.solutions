@@ -1,4 +1,5 @@
+# AlkaliBlog
 
-# Blog
+https://blog.alkaline.solutions content, currently based on the [wintersmith] default theme.
 
-The default [wintersmith](https://github.com/jnordberg/wintersmith) template
+[wintersmith]: http://wintersmith.io
