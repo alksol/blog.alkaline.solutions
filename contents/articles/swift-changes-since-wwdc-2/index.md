@@ -1,11 +1,11 @@
 ---
 title: "Swift Changes since WWDC, Part 2"
 author: dwaite
-date: 2015-02-02
+date: 2015-02-03
 template: article.jade
 tags: swift, language
 ---
-This is a continuation of [part1], where I'll continue to speak to changes to
+This is a continuation of [part 1], where I'll continue to speak to changes to
 the Swift language between the WWDC announcement of Swift, and the Swift 1.1
 release alongside Yosemite.
 

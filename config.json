@@ -1,6 +1,6 @@
 {
   "locals": {
-    "url": "http://localhost:8080",
+    "url": "http://localhost:8081",
     "name": "Alkaline Solutions",
     "owner": "David Waite",
     "description": "Musings around Software Engineering"
@@ -10,7 +10,9 @@
     "./plugins/paginator.coffee",
     "./node_modules/wintersmith-less/",
     "./node_modules/wintersmith-tag/lib/",
-    "./node_modules/wintersmith-browserify",
+    "./node_modules/wintersmith-browserify"
+  ],
+  "extraPlugins": [
     "./node_modules/wintersmith-pagedownextra"
   ],
   "require": {
@@ -40,5 +42,7 @@
       "strikethrough"
     ],
     "hljsClassPrefix": ""
-  }
+  },
+  "filenameTemplate": "/articles/:year/:month/:day/:title",
+  "port": 8081
 } 

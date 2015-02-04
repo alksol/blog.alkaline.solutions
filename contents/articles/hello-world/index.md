@@ -1,7 +1,7 @@
 ---
 title: Hello, World!
 author: dwaite
-date: 2015-01-24
+date: 2015-01-30
 template: article.jade
 ---
 
