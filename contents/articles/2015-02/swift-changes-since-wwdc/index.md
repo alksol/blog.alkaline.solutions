@@ -1,5 +1,5 @@
 ---
-title: "Swift Changes Since WWDC, Part 1"
+title: "Swift Changes since WWDC, Part 1"
 author: dwaite
 date: 2015-02-01
 template: article.jade
@@ -19,11 +19,9 @@ to iron out. However, as I play around with creating new apps and frameworks
 using this language, I decided I should document what I find in the case that it
 is interesting or helpful for others. 
 
-<hr />
+---
 
 > Note: This is part 1 of a two part series. You may also be interested in [part 2].
-
-## Swift has changed since WWDC
 
 Swift 1.0 was released alongside iOS 9, with 1.1 being released alongside
 Yosemite. There were a lot of features added and syntax changed between the

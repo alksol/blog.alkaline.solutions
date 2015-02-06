@@ -14,11 +14,20 @@ module.exports = (env, callback) ->
   options = env.config.paginator or {}
   for key, value of defaults
     options[key] ?= defaults[key]
+  getArticlesForDirectories = (directories) ->
+    directories.reduce (result, directory) ->
+      if directory.index?
+        result = result.concat directory
+      subdirectories = directory._.directories
+      if subdirectories
+        result = result.concat getArticlesForDirectories(subdirectories)...
+      result
+    ,[]
 
   getArticles = (contents) ->
     # helper that returns a list of articles found in *contents*
     # note that each article is assumed to have its own directory in the articles directory
-    articles = contents[options.articles]._.directories.map (item) -> item.index
+    articles = getArticlesForDirectories(contents[options.articles]._.directories).map (item) -> item.index
     # skip articles that does not have a template associated
     articles = articles.filter (item) -> item.template isnt 'none'
     # sort article by date

@@ -10,10 +10,8 @@
     "./plugins/paginator.coffee",
     "./node_modules/wintersmith-less/",
     "./node_modules/wintersmith-tag/lib/",
-    "./node_modules/wintersmith-browserify"
-  ],
-  "extraPlugins": [
-    "./node_modules/wintersmith-pagedownextra"
+    "./node_modules/wintersmith-browserify",
+    "./node_modules/wintersmith-markdown-it"
   ],
   "require": {
     "moment": "moment",
@@ -31,18 +29,9 @@
   "paginator": {
     "perPage": 3
   },
-  "pagedownextra": {
-    "extensions": [
-      "fenced_code_gfm", 
-      "tables", 
-      "def_list", 
-      "attr_list", 
-      "footnotes",
-      "smartypants",
-      "strikethrough"
-    ],
+  "markdownit": {
     "hljsClassPrefix": ""
   },
-  "filenameTemplate": "/articles/:year/:month/:day/:title",
+  "filenameTemplate": "/articles/:year/:month/:title/index.html",
   "port": 8081
 } 

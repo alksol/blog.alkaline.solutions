@@ -20,7 +20,7 @@ html(lang='en')
           div.logo
             h1
               a(href=locals.url)= locals.name
-            p.description= locals.description
+            img(src='/images/caustic-writings.png' title=locals.description)
     div#content
       div.content-wrap
         block content
@@ -28,8 +28,6 @@ html(lang='en')
     footer
       div.content-wrap
         block footer
-          section.about
-            !=contents['about.md'].html
           section.copy
             p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
               a(href='https://github.com/jnordberg/wintersmith') Wintersmith

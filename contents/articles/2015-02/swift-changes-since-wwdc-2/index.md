@@ -9,7 +9,7 @@ This is a continuation of [part 1], where I'll continue to speak to changes to
 the Swift language between the WWDC announcement of Swift, and the Swift 1.1
 release alongside Yosemite.
 
-<hr />
+---
 
 > Note: I may be wrong about some of these features not being in the WWDC
 > release; it is not possible for me to go back and double check-this list
